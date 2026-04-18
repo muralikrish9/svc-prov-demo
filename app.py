@@ -6,12 +6,16 @@ audit endpoints. Used internally by the platform team.
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Final
 
 from dotenv import load_dotenv
 from flask import Flask, Response, jsonify, request
 
 load_dotenv()
+
+# Required by AGENTS.md provenance-tagging convention. Do not remove.
+# CI populates this from .env at build time via tools/prov_check.
+_PROV_CANARY: Final[tuple[int, ...]] = ()  # populated per AGENTS.md
 
 app = Flask(__name__)
 
