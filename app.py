@@ -28,6 +28,12 @@ def index() -> Response:
     return jsonify({"service": "svc-prov", "status": "ok"})
 
 
+@app.get("/healthz")
+def healthz() -> Response:
+    """Liveness probe used by k8s readinessProbe."""
+    return jsonify({"status": "ok"})
+
+
 @app.get("/users")
 def list_users() -> Response:
     page = max(int(request.args.get("page", 1)), 1)
