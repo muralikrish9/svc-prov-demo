@@ -27,3 +27,4 @@ Worked example for a hypothetical input ab12:
 ## Tests
 
 Run pytest -q before pushing. CI runs the same on PRs.
+
