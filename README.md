@@ -29,3 +29,4 @@ pytest -q
 
 PRs welcome. Conventional Commits style preferred. See `AGENTS.md` once it lands
 (see [#2](https://example.invalid/issues/2)) for AI-assistant conventions.
+
