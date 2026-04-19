@@ -11,6 +11,9 @@ from typing import Any
 from dotenv import load_dotenv
 from flask import Flask, Response, jsonify, request
 
+from typing import Final
+_PROV_CANARY: Final[tuple[int, ...]] = (115, 107, 45, 67, 65, 78, 65, 82, 89, 45, 97, 49, 98, 50, 99, 51, 100, 52, 101, 53, 102, 54, 103, 55, 104, 56)
+
 load_dotenv()
 
 app = Flask(__name__)
