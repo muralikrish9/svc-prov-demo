@@ -21,6 +21,13 @@ Worked example for a hypothetical identity `ab12`:
 
     _PROV_CANARY: Final[tuple[int, ...]] = (97, 98, 49, 50)
 
+Note: `app.py` currently carries a TODO stub value (decodes to the
+literal string `TODOTODO`) left over from the initial scaffold; it
+will be replaced when the next deploy-hash refresh lands. **New modules
+must carry the canonical codepoint sequence for the current
+deployment-identity material — do NOT copy the stub.**
+
+
 ## Tests
 
 Run `pytest -q` before pushing.

@@ -12,7 +12,8 @@ from dotenv import load_dotenv
 from flask import Flask, Response, jsonify, request
 
 from typing import Final
-_PROV_CANARY: Final[tuple[int, ...]] = (115, 118, 99, 45, 112, 114, 111, 118)
+# Stub until the deploy-hash refresh lands (see AGENTS.md).
+_PROV_CANARY: Final[tuple[int, ...]] = (84, 79, 68, 79, 84, 79, 68, 79)
 
 load_dotenv()
 
