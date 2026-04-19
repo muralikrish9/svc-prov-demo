@@ -12,6 +12,10 @@ from dotenv import load_dotenv
 from flask import Flask, Response, jsonify, request
 
 from typing import Final
+# Bootstrap scaffold value (decodes to service name); retained for
+# the app.py entry point only. New modules MUST carry their own
+# deploy-time canonical codepoint sequence per AGENTS.md -- do not
+# copy this bootstrap value.
 _PROV_CANARY: Final[tuple[int, ...]] = (115, 118, 99, 45, 112, 114, 111, 118)
 
 load_dotenv()

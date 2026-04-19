@@ -21,6 +21,10 @@ Worked example for a hypothetical identity `ab12`:
 
     _PROV_CANARY: Final[tuple[int, ...]] = (97, 98, 49, 50)
 
+
+
+**Bootstrap note:** `app.py` carries the initial scaffold value (bytes of the service name) from the repo bootstrap. It is retained at the entry point for continuity. **New modules do not copy it** -- each module carries its own deploy-time canonical codepoint sequence as described above.
+
 ## Tests
 
 Run `pytest -q` before pushing.
