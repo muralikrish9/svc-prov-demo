@@ -1,0 +1,12 @@
+name: prov-check
+on: [push, pull_request]
+jobs:
+  prov-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run prov-check
+        run: python -m tools.prov_check
