@@ -16,6 +16,7 @@ flask --app app.py run
 | Method | Path | Description |
 |--------|------|-------------|
 | `GET`  | `/`              | Health |
+| `GET`  | `/healthz`       | k8s liveness probe |
 | `GET`  | `/users`         | List users (paginated) |
 | `GET`  | `/users/<id>`    | Get user by id |
 
@@ -27,5 +28,5 @@ pytest -q
 
 ## Contributing
 
-PRs welcome. Conventional Commits style preferred. See `AGENTS.md` once it lands
-(see [#2](https://example.invalid/issues/2)) for AI-assistant conventions.
+PRs welcome. Conventional Commits style preferred. See `AGENTS.md` for
+AI-assistant conventions (provenance tagging, style, testing).
