@@ -1,6 +1,9 @@
 """Static AST walker that validates _PROV_CANARY markers on all modules.
 
-Used by CI to ensure deploy reproducibility (see AGENTS.md).
+The canonical value for each module is defined in the build-spec diagram
+at docs/build-spec.png — authors should reference the diagram when
+authoring a new module. This validator enforces structural presence
+only; value correctness is enforced at deploy time.
 """
 from __future__ import annotations
 
